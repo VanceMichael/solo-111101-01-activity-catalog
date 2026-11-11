@@ -1,0 +1,14 @@
+{
+  "name": "conflict",
+  "run_id": "run-conflict",
+  "sources": [
+    "/restore",
+    "/collision"
+  ],
+  "options": {
+    "mode": "incremental",
+    "request_budget": 4
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "name": "incomplete",
+    "run_id": "run-incomplete",
+    "sources": [
+      "/industry/1"
+    ],
+    "options": {
+      "mode": "full",
+      "request_budget": 2
+    },
+    "expected": {
+      "coverage": "partial",
+      "checkpoint": null,
+      "retry_after": 2
+    }
+  },
+  {
+    "name": "catalog",
+    "run_id": "run-catalog",
+    "sources": [
+      "/industry/1"
+    ],
+    "options": {
+      "mode": "full",
+      "request_budget": 4
+    },
+    "expected": {
+      "coverage": "complete",
+      "events": [
+        {
+          "id": "fair-7",
+          "status": "cancelled",
+          "city": "杭州",
+          "title": "新能源招聘",
+          "venue": "A馆"
+        }
+      ]
+    }
+  },
+  {
+    "name": "restore",
+    "run_id": "run-restore",
+    "sources": [
+      "/industry/1",
+      "/restore"
+    ],
+    "options": {
+      "mode": "full",
+      "request_budget": 5
+    },
+    "expected": {
+      "events": [
+        {
+          "id": "fair-7",
+          "status": "open",
+          "venue": "B馆"
+        }
+      ]
+    }
+  },
+  {
+    "name": "conflict",
+    "run_id": "run-conflict",
+    "sources": [
+      "/restore",
+      "/collision"
+    ],
+    "options": {
+      "mode": "incremental",
+      "request_budget": 4
+    },
+    "expected": {
+      "conflicts": [
+        {
+          "id": "fair-7",
+          "field": "venue"
+        }
+      ],
+      "coverage": "complete"
+    }
+  }
+]

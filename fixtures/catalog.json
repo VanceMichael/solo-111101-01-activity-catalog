@@ -1,0 +1,13 @@
+{
+  "name": "catalog",
+  "run_id": "run-catalog",
+  "sources": [
+    "/industry/1"
+  ],
+  "options": {
+    "mode": "full",
+    "request_budget": 4
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

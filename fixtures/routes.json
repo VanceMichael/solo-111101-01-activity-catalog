@@ -1,0 +1,35 @@
+{
+  "/industry/1": [
+    {
+      "status": 200,
+      "file": "industry.html",
+      "headers": {
+        "ETag": "v1"
+      }
+    }
+  ],
+  "/industry/2": [
+    {
+      "status": 429,
+      "headers": {
+        "Retry-After": "2"
+      }
+    },
+    {
+      "status": 200,
+      "file": "city.html"
+    }
+  ],
+  "/restore": [
+    {
+      "status": 200,
+      "file": "restore.html"
+    }
+  ],
+  "/collision": [
+    {
+      "status": 200,
+      "file": "collision.html"
+    }
+  ]
+}

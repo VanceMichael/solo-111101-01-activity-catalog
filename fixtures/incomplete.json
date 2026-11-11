@@ -1,0 +1,13 @@
+{
+  "name": "incomplete",
+  "run_id": "run-incomplete",
+  "sources": [
+    "/industry/1"
+  ],
+  "options": {
+    "mode": "full",
+    "request_budget": 2
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

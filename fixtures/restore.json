@@ -1,0 +1,14 @@
+{
+  "name": "restore",
+  "run_id": "run-restore",
+  "sources": [
+    "/industry/1",
+    "/restore"
+  ],
+  "options": {
+    "mode": "full",
+    "request_budget": 5
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}
